@@ -32,3 +32,10 @@
   Distinguir entre los elementos necesarios para construir la aplicación y los necesarios para ejecutarla.
   Justificar técnicamente cada decisión adoptada en el Dockerfile.
 ```
+## Consideraciones en AWS
+```
+Si lo lanzas en AWS en la llamada a la api del app.js hay que cambiar
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+const API_URL = process.env.REACT_APP_API_URL || 'http://IP-PUBLICA:3001';
+```
+
