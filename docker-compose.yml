@@ -43,9 +43,9 @@ services:
   # Servicio frontend (aplicación React servida por Nginx) construido desde Dockerfile local para optimización multi-stage.
   frontend:
     build: ./frontend
-    # Mapear puerto 80
+    # Mapear puerto
     ports:
-      - "80:80"
+      - "3000:80"
     # El frontend necesita la API del backend para funcionar completamente. Asegura orden de inicio.
     depends_on:
       - backend
