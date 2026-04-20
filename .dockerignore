@@ -1,5 +1,3 @@
-# Excluir archivos y directorios innecesarios para reducir el tamaño del contexto de construcción y mejorar la seguridad
-
 # Dependencias de Node.js: ya se instalan en el contenedor, no copiar para evitar duplicados y posibles conflictos
 node_modules
 
