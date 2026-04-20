@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Establecer el directorio de trabajo en /app
 WORKDIR /app
@@ -8,8 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependencias de producción únicamente
-# Se usa 'npm ci' para instalaciones deterministas y más rápidas que 'npm install'.
-RUN npm ci --only=production
+RUN npm install --production
 
 # Copiar el código fuente después de instalar dependencias
 # El código fuente cambia más frecuentemente que las dependencias, por lo que se copia al final

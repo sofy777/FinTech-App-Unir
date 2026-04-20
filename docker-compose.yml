@@ -8,7 +8,7 @@ services:
   # El backend requiere PostgreSQL para persistencia de datos. Usar un contenedor dedicado
   # facilita la gestión, backups y escalabilidad.
   db:
-    image: postgres:13-alpine
+    image: postgres:15-alpine
     # Variables de entorno para configuración de la base de datos
     environment:
       POSTGRES_DB: fintech_db

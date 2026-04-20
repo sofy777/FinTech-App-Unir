@@ -1,6 +1,5 @@
-# React requiere Node.js y npm para el proceso de build. Se usa node:18-alpine por su tamaño reducido
-# y compatibilidad con react-scripts.
-FROM node:18-alpine AS build
+# React requiere Node.js y npm para el proceso de build.
+FROM node:20-alpine AS build
 
 # Establecer directorio de trabajo
 WORKDIR /app
@@ -9,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar todas las dependencias
-RUN npm ci
+RUN npm install
 
 # Copiar código fuente después de dependencias para optimizar caché.
 COPY . .
